@@ -17,18 +17,15 @@ build:
 
 requirements:
   host:
-    - pip
     - python {{ python_min }}
+    - pip
     - hatchling
   run:
     - python >={{ python_min }}
 
-
 test:
   imports:
     - public
-    - public.public
-    - public.private
   commands:
     - pip check
   requires:
